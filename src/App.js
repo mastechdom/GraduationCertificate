@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from "react";
-import { exportComponentAsPNG } from "react-component-export-image";
+import { exportComponentAsPNG, exportComponentAsPDF } from "react-component-export-image";
 import certiImage from './certificalte.jpeg'
 import logo from './Saarthi-blue.png'
 
@@ -23,8 +23,9 @@ class App extends Component {
           <button
             onClick={(e) => {
               e.preventDefault();
-              exportComponentAsPNG(this.certificateWrapper, {
-                html2CanvasOptions: { backgroundColor: null }
+              exportComponentAsPDF(this.certificateWrapper, {
+                fileName:this.state.Name,
+                pdfOptions:{w:2000, h:1500, x:250, y:150, unit:'px', orientation:'l', pdfFormat:'a0'}
               });
             }}
           >

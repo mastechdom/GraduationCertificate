@@ -1,38 +1,299 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: "Hachi Maru Pop", cursive;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App #downloadWrapper {
+  width: 63%;
+  height: 80vh;
+}
+.App #certificateWrapper {
+  box-shadow: 0 0 5px #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.App #certificateWrapper img {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App #certificateWrapper #companyName {
+  font-family: "Staatliches", cursive;
+  margin: 0;
+  position: absolute;
+  left: 350px;
+  top: 50px;
+  font-size: 15pt;
+  font-weight: 700;
+  width: 80%;
+}
+.App #certificateWrapper #matter {
+  font-family: "Staatliches", cursive;
+  margin: 0;
+  position: absolute;
+  left: 100px;
+  top: 220px;
+  font-size: 12pt;
+  width: 80%;
+}
+.App #certificateWrapper #sign {
+  font-family: "Staatliches", cursive;
+  margin: 0;
+  position: absolute;
+  left: 80px;
+  top: 400px;
+  font-size: 15pt;
+  font-weight: 700;
+  width: 80%;
+}
+span{
+  font-size: 17pt;
+  font-weight: bold;
+}
+.App #certificateWrapper #logo{
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+}
+.App #certificateWrapper #logo img{
+  width: 100%;
+  height: 100%;
+}
+#certificateWrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .App #certificateWrapper #companyName {
+    left: 300px;
+    top: 50px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 1250px) {
+  .App #certificateWrapper #companyName {
+    left: 300px;
+    top: 50px;
+  }
+  .App #certificateWrapper #matter {
+    left: 80px;
+    top: 180px;
+  }
+  .App #certificateWrapper #sign {
+    left: 80px;
+    top: 350px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .App #certificateWrapper #companyName {
+    left: 250px;
+    top: 50px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .App #certificateWrapper #companyName {
+    font-size: 13pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 80px;
+    top: 180px;
+    font-size: 10pt;
+  }
+  .App #certificateWrapper #sign {
+    top: 300px;
+    font-size: 10pt;
+  }
+  span{
+    font-size: 12pt;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .App #certificateWrapper #companyName {
+    left: 200px;
+    top: 30px;
+    font-size: 13pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 60px;
+    top: 120px;
+    font-size: 10pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 60px;
+    top: 250px;
+    font-size: 10pt;
+  }
+  span{
+    font-size: 11pt;
+    font-weight: bold;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 30px;
+    left: 60px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .App #certificateWrapper #companyName {
+    left: 150px;
+    top: 25px;
+    font-size: 11pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 50px;
+    top: 100px;
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 45px;
+    top: 220px;
+    font-size: 9pt;
+  }
+  span{
+    font-size: 11pt;
+    font-weight: bold;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .App #certificateWrapper #companyName {
+    left: 125px;
+    top: 25px;
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 40px;
+    top: 90px;
+    font-size: 7pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 45px;
+    top: 190px;
+    font-size: 7pt;
+  }
+  span{
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 15px;
+    left: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .App #downloadWrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  .App #certificateWrapper #companyName {
+    left: 210px;
+    top: 40px;
+    font-size: 12pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 60px;
+    top: 150px;
+    font-size: 10pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 60px;
+    top: 270px;
+    font-size: 12pt;
+  }
+  span{
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 40px;
+    left: 60px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .App #certificateWrapper #companyName {
+    left: 190px;
+    top: 40px;
+    font-size: 10pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 60px;
+    top: 130px;
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 60px;
+    top: 250px;
+    font-size: 10pt;
+  }
+  span{
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 40px;
+    left: 60px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .App #certificateWrapper #companyName {
+    left: 170px;
+    top: 30px;
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 40px;
+    top: 110px;
+    font-size: 7pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 40px;
+    top: 200px;
+    font-size: 9pt;
+  }
+  span{
+    font-size: 9pt;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .App #certificateWrapper #companyName {
+    left: 130px;
+    top: 20px;
+    font-size: 8pt;
+  }
+  .App #certificateWrapper #matter {
+    left: 40px;
+    top: 90px;
+    font-size: 7pt;
+  }
+  .App #certificateWrapper #sign {
+    left: 40px;
+    top: 180px;
+    font-size: 9pt;
+  }
+  span{
+    font-size: 7pt;
+  }
+  .App #certificateWrapper #logo{
+    position: absolute;
+    top: 20px;
+    left: 40px;
   }
 }
